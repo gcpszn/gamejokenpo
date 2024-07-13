@@ -3,10 +3,10 @@ from time import sleep
 itens = ('Pedra', 'Papel', 'Tesoura')
 computador = randint(0, 2)
 print('-=-=- Vamos jogar JOKENPO -=-=-')
-jogador = int(input('''Qual é a sua jogada?
-[ 0 ] Pedra
+jogador = int(input('''[ 0 ] Pedra
 [ 1 ] Papel
-[ 2 ] Tesoura '''))
+[ 2 ] Tesoura
+Qual é a sua jogada: '''))
 print('-=' * 15)
 print('JO')
 sleep(1)
@@ -15,27 +15,32 @@ sleep(1)
 print('PO!')
 sleep(1)
 print('-=' * 20)
-print('O computador jogou {}'.format(itens[computador]))
-print('E o jogador jogou {}'.format(itens[jogador]))
+sleep(1)
+print('O COMPUTADOR ENTROU NA DISPUTA E O JOGADOR ESTÁ PRONTO PARA O DESAFIO!')
 print('-=' * 20)
+sleep(1)
 if computador == jogador: # EMPATE
-	print('JOGO EMPATADO!')
+	print('JOGO EMPATADO! Os dois fizeram a mesma jogada.')
 elif computador == 0: # COMPUTADOR JOGOU PEDRA 
 	if jogador == 1:
-		print('Papel vence Pedra! Vitória do Jogador!')
+		print('PAPEL VENCE PEDRA! VITÓRIA DO JOGADOR!')
 	elif jogador == 2:
-		print('Pedra vence Tesoura! Vitória do Computador!')
+		print('PEDRA VENCE TESOURA! VITÓRIA DO COMPUTADOR!')
 elif computador == 1: # COMPUTADOR JOGOU PAPEL
 	if jogador == 0:
-		print('Papel vence Pedra! Vitória do Computador!')
+		print('PAPEL VENCE PEDRA! VITÓRIA DO COMPUTADOR!')
 	elif jogador == 2:
-		print('Tesoura vence Papel! Vitória do Jogador!')
+		print('TESOURA VENCE PAPEL! VITÓRIA DO JOGADOR!')
 
 elif computador == 2: # COMPUTADOR JOGOU TESOURA 
 	if jogador == 0:
-		print('Pedra vence tesoura! Vitória do Jogador!')
+		print('PEDRA VENCE TESOURA! VITÓRIA DO JOGADOR!')
 	elif jogador == 1: 
-		print('Tesoura vence Papel! Vitória do Computador!')
+		print('TESOURA VENCE PAPEL! VITÓRIA DO COMPUTADOR!')
+
+  
+
+
 
   
 
